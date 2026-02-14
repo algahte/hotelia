@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- ───── Model version ───── -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- ───── Parent configuration for Spring Boot ───── -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.0.2</version>
+        <relativePath/>
+    </parent>
+
+    <!-- ───── Project coordinates and metadata ───── -->
+    <groupId>com.algahte</groupId>
+    <artifactId>hotelia</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>hotelia</name>
+    <description>
+        Hotelia is a hotel management application designed to handle core hotel operations,
+        including reservations, guest management, room allocation, and billing.
+    </description>
+    <url>https://github.com/algahte/hotelia</url>
+
+    <!-- ───── Licensing information ───── -->
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/license/mit</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <!-- ───── Developer information ───── -->
+    <developers>
+        <developer>
+            <id>algahte</id>
+            <name>Mohammed Kh. Alkahtani Maldonado</name>
+            <email>algahte@gmail.com</email>
+            <organization>Independent</organization>
+            <organizationUrl>https://github.com/algahte</organizationUrl>
+            <roles>
+                <role>author</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <!-- ───── Source control management (SCM) information ───── -->
+    <scm>
+        <connection>scm:git:https://github.com/algahte/hotelia.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:algahte/hotelia.git</developerConnection>
+        <url>https://github.com/algahte/hotelia</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <!-- ───── Project properties ───── -->
+    <properties>
+        <java.version>25</java.version>
+    </properties>
+
+    <!-- ───── Project dependencies ───── -->
+    <dependencies>
+        <!-- ───── Spring Boot Starters ───── -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webmvc</artifactId>
+        </dependency>
+        <!-- ───── Development libraries ───── -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- ───── Spring Boot testing starters ───── -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webmvc-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- ─────  Maven Compiler Plugin  ───── -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <!-- ─────  GraalVM Native Maven Plugin  ───── -->
+            <plugin>
+                <groupId>org.graalvm.buildtools</groupId>
+                <artifactId>native-maven-plugin</artifactId>
+            </plugin>
+            <!-- ─────  Spring Boot Maven Plugin  ───── -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: ${SPRING_APPLICATION_NAME}
+    version: ${SPRING_APPLICATION_VERSION}
+  profiles:
+    active: ${SPRING_PROFILE_ACTIVE}
+  threads:
+    virtual:
+      enabled: ${SPRING_THREADS_VIRTUAL_ENABLED}
+  mvc:
+    problemdetails:
+      enabled: ${SPRING_MVC_PROBLEMSDETAILS_ENABLED}
+  web:
+    error:
+      include-message: ${SPRING_WEB_ERROR_INCLUDE_MESSAGE}
+      include-binding-errors: ${SPRING_WEB_ERROR_INCLUDE_BINDING_ERRORS}
+      include-stacktrace: ${SPRING_WEB_ERROR_INCLUDE_STACKTRACE}
+      whitelabel:
+        enabled: ${SPRING_WEB_ERROR_WHITELABEL_ENABLED}
+  devtools:
+    add-properties: ${SPRING_DEVTOOLS_ADD_PROPERTIES}
+  config:
+    import: optional:file:.env.properties
+
+server:
+  port: ${SERVER_PORT}
+  shutdown: ${SERVER_SHUTDOWN}
+  servlet:
+    context-path: ${SERVER_SERVLET_CONTEXT_PATH}
+
+logging:
+  level:
+    root: ${LOGGING_LEVEL_ROOT}
+    web: ${LOGGING_LEVEL_WEB}
